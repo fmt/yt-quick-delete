@@ -1,0 +1,43 @@
+.ytqd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0 2px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--yt-spec-text-primary, #0f0f0f);
+  cursor: pointer;
+  flex: none;
+  vertical-align: middle;
+}
+.ytqd-btn:hover {
+  background: var(--yt-spec-badge-chip-background, rgba(0, 0, 0, 0.1));
+  color: #d93025;
+}
+.ytqd-btn[disabled] {
+  opacity: 0.4;
+  cursor: default;
+}
+.ytqd-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  pointer-events: none;
+}
+/* Old layout: make the menu area a flex row so the buttons sit side by side */
+ytd-playlist-video-renderer #menu.ytqd-row {
+  display: flex;
+  align-items: center;
+}
+/* Hide the popup while the extension drives it, to avoid flicker */
+body.ytqd-working ytd-popup-container,
+body.ytqd-working tp-yt-iron-dropdown,
+body.ytqd-working yt-contextual-sheet-layout,
+body.ytqd-working yt-sheet-view-model {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

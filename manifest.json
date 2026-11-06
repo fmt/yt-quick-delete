@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Playlist Quick Delete",
+  "version": "1.0.0",
+  "description": "Adds a delete button next to the three-dot menu on YouTube playlist items (Watch Later included).",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
